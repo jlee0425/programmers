@@ -19,20 +19,8 @@
 export const notCompleted = (
 	participants: string[],
 	completions: string[],
-): string => {
-	let hash = new Map();
-	for (let p of participants) {
-		hash.set(p, hash.get(p) + 1 || 1);
-	}
-
-	for (let c of completions) {
-		let n = hash.get(c);
-		if (n > 1) {
-			hash.set(c, n - 1);
-		} else {
-			hash.delete(c);
-		}
-	}
-
-	return [...hash.keys()][0];
-};
+): string =>
+	participants.find(
+		(p) => !completions[p],
+		completions.map((p) => (completions[p] = (completions[p] | 0) + 1)),
+	);
