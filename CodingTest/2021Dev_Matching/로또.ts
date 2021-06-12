@@ -46,14 +46,14 @@
  * @returns 가능한 당첨횟수
  */
 export const lotto = (lottos: number[], win_nums: number[]): number[] => {
-	const map: Map<number, number> = new Map();
-	lottos.map((v) => map.set(v, map.get(v) + 1 || 1));
+	const rank = [6, 6, 5, 4, 3, 2, 1];
 
-	const match = win_nums.reduce((n, cur) => (map.has(cur) ? n + 1 : n), 0);
-	const zero = map.get(0) || 0;
-	if (match === 0 && zero === 0) return [6, 6];
-	const best = 6 - match - zero + 1;
-	const actual = zero == 0 ? best : match < 2 ? 6 : 6 - match + 1;
+	const match = lottos.reduce(
+		(n, cur) => (win_nums.includes(cur) ? n + 1 : n),
+		0,
+	);
+	const zero = lottos.filter((n) => n === 0).length;
 
-	return [best, actual];
+	console.log(`match, zero`, match, zero);
+	return [rank[match + zero], rank[match]];
 };
