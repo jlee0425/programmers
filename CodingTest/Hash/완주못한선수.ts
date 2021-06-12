@@ -19,8 +19,9 @@
 export const notCompleted = (
 	participants: string[],
 	completions: string[],
-): string =>
-	participants.find(
-		(p) => !completions[p],
-		completions.map((p) => (completions[p] = (completions[p] | 0) + 1)),
-	);
+): string => {
+	const hash = new Map();
+	completions.map((c) => (hash[c] = (hash[c] | 0) + 1));
+
+	return participants.find((p) => !hash[p]--);
+};
