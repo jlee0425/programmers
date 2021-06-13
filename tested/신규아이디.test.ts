@@ -21,4 +21,7 @@ describe('신규 아이디 추천', () => {
 	it('"aaaaaaaaaaaaaaaa"', () => {
 		expect(newid('aaaaaaaaaaaaaaaa')).to.equal('aaaaaaaaaaaaaaa');
 	});
+	it('b......@', () => {
+		expect(newid('b......@')).to.equal('bbb');
+	});
 });
