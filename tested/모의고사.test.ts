@@ -1,4 +1,4 @@
-import { supoja } from '../CodingTest/BruteForce/모의고사';
+import { supoja } from './../CodingTest/BruteForce/모의고사';
 import { expect } from 'chai';
 import { describe } from 'mocha';
 
