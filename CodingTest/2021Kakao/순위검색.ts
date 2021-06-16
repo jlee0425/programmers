@@ -34,13 +34,14 @@
  * @param query query
  * @returns number of programmers that matches each query
  */
-
-function dev(this: any, lang, field, exp, food, score) {
-	this.lang = lang;
-	this.field = field;
-	this.exp = exp;
-	this.food = food;
-	this.score = score;
+class Dev {
+	constructor(
+		lang: string,
+		field: string,
+		exp: string,
+		food: string,
+		score: string,
+	) {}
 }
 
 export const ranking = (info: string[], query: string[]): number[] => {
@@ -51,12 +52,12 @@ export const ranking = (info: string[], query: string[]): number[] => {
 	for (let i = 0; i < query.length; i++) {
 		let [lang, field, exp, foodScore] = query[i].split(' and ');
 		let [food, score] = foodScore.split(' ');
-		queries.push(new dev(lang, field, exp, food, score));
+		queries.push(new Dev(lang, field, exp, food, score));
 	}
 
 	for (let j = 0; j < info.length; j++) {
 		let [pLang, pField, pExp, pFood, pScore] = info[j].split(' ');
-		devs.push(new dev(pLang, pField, pExp, pFood, pScore));
+		devs.push(new Dev(pLang, pField, pExp, pFood, pScore));
 	}
 
 	for (let i = 0; i < queries.length; i++) {
@@ -78,18 +79,18 @@ export const ranking = (info: string[], query: string[]): number[] => {
 	return ans;
 };
 
-function matchLang(lang, query) {
+function matchLang(lang: string, query: string) {
 	return lang == query || query == '-';
 }
-function matchField(field, query) {
+function matchField(field: string, query: string) {
 	return field == query || query == '-';
 }
-function matchExp(exp, query) {
+function matchExp(exp: string, query: string) {
 	return exp == query || query == '-';
 }
-function matchFood(food, query) {
+function matchFood(food: string, query: string) {
 	return food == query || query == '-';
 }
-function matchScore(score, query) {
+function matchScore(score: string, query: string) {
 	return Number(score) >= Number(query);
 }
