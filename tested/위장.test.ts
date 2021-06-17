@@ -1,4 +1,4 @@
-import { camouflage } from './../CodingTest/Hash/위장';
+import { camouflage } from '../CodingTest/Hash/위장';
 import { expect } from 'chai';
 import { describe } from 'mocha';
 
