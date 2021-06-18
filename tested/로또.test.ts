@@ -1,4 +1,4 @@
-import { lotto } from '../CodingTest/2021Dev_Matching/로또';
+import { lotto } from '../코딩테스트/2021Dev_Matching/로또';
 import { expect } from 'chai';
 import { describe } from 'mocha';
 

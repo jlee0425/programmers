@@ -1,4 +1,4 @@
-import { ranking } from '../CodingTest/2021Kakao/순위검색';
+import { ranking } from '../코딩테스트/2021Kakao/순위검색';
 import { expect } from 'chai';
 import { describe } from 'mocha';
 

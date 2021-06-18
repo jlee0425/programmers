@@ -1,4 +1,4 @@
-import { newid } from '../CodingTest/2021Kakao/신규아이디';
+import { newid } from '../코딩테스트/2021Kakao/신규아이디';
 import { expect } from 'chai';
 import { describe } from 'mocha';
 
