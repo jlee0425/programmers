@@ -1,4 +1,4 @@
-import { printer } from '../CodingTest/Stack&Queue/프린터';
+import { printer } from '../코딩테스트연습/Stack&Queue/프린터';
 import { expect } from 'chai';
 import { describe } from 'mocha';
 

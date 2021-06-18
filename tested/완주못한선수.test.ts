@@ -1,4 +1,4 @@
-import { notCompleted } from '../CodingTest/Hash/완주못한선수';
+import { notCompleted } from '../코딩테스트연습/Hash/완주못한선수';
 import { expect } from 'chai';
 import { describe } from 'mocha';
 
