@@ -1,4 +1,4 @@
-import { rotateMatrix } from './../코딩테스트/2021Dev_Matching/행렬테두리회전';
+import { rotateMatrix } from '../코딩테스트/2021Dev_Matching/행렬테두리회전';
 import { expect } from 'chai';
 import { describe } from 'mocha';
 
