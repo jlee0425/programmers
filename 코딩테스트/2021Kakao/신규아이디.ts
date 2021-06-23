@@ -41,7 +41,7 @@
 export const newid = (newId: string): string => {
 	let answer: string = newId
 		.toLocaleLowerCase() // 1단계
-		.replace(/[^\.a-z1-9-_]/g, '') // 2단계
+		.replace(/[^\.a-z0-9-_]/g, '') // 2단계
 		.replace(/\.+/g, '.') // 3단계
 		.replace(/^\.|\.+$/, ''); // 4단계
 
