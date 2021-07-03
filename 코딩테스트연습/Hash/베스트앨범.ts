@@ -50,6 +50,7 @@ export const bestAlbum = (genres: string[], plays: number[]): number[] => {
 		.sort((a, b) => b.total - a.total)
 		.map((m) => m.music);
 
+	console.table(bestMusics);
 	let ans = [];
 
 	for (let genre of bestMusics) {
