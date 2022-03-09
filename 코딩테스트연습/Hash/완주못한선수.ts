@@ -18,7 +18,7 @@
  */
 export const notCompleted = (
 	participants: string[],
-	completions: string[],
+	completions: string[]
 ): string => {
 	const hash = new Map();
 	completions.map((c) => (hash[c] = (hash[c] | 0) + 1));

@@ -19,3 +19,35 @@
 // 		).to.equal(82);
 // 	});
 // });
+
+const gradeList = {
+  F: 0,
+  'D-': 1,
+  D0: 2,
+  'D+': 3,
+  'C-': 4,
+  C0: 5,
+  'C+': 6,
+  'B-': 7,
+  B0: 8,
+  'B+': 9,
+  'A-': 10,
+  A0: 11,
+  'A+': 12
+}
+function solution (grades) {
+  var answer = []
+  let transcript = new Map()
+
+  for (let g of grades) {
+    const [cl, gr] = g.split(' ')
+    console.log(cl, gr, gradeList[gr])
+
+    // transcript.set(cl, (Math.max((transcript.get(cl) || 0), gradeList[gr])));
+    transcript.set('?', 0)
+  }
+
+  console.log('transcript', transcript)
+
+  return answer
+}
