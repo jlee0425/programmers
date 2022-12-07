@@ -42,3 +42,5 @@ export const targetNumber = (nums: number[], target: number): number => {
 
 	return ans;
 };
+
+targetNumber([1, 1, 1, 1, 1], 3);
